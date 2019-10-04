@@ -13,7 +13,7 @@ class ShowsController {
     let baseURL = URL(string: "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup")!
     var shows: [Show]?
     
-    func findShowsWith(searchTerm: String, completionHandler: @escaping () -> Void) {
+    func getShowsMatching(searchTerm: String, completionHandler: @escaping () -> Void) {
         if searchTerm.isEmpty {
             print("Search term is blank.")
             return
@@ -70,19 +70,27 @@ class ShowsController {
         }.resume()
     }
     
-    func getImageFor(show: Show, completionHandler: @escaping (UIImage?) -> Void) {
-        getImageAt(url: show.imageURL) { image in
+    static func getImageFor(show: Show, completionHandler: @escaping (UIImage?) -> Void) {
+        guard let imageURL = show.imageURL else {
+            completionHandler(nil)
+            return
+        }
+        getImageAt(url: imageURL) { image in
             completionHandler(image)
         }
     }
     
-    func getImageFor(service: StreamingService, completionHandler: @escaping (UIImage?) -> Void) {
-        getImageAt(url: service.iconURL) { image in
+    static func getImageFor(service: StreamingService, completionHandler: @escaping (UIImage?) -> Void) {
+        guard let iconURL = service.iconURL else {
+            completionHandler(nil)
+            return
+        }
+        getImageAt(url: iconURL) { image in
             completionHandler(image)
         }
     }
     
-    func getImageAt(url: URL, completionHandler: @escaping (UIImage?) -> Void) {
+    static func getImageAt(url: URL, completionHandler: @escaping (UIImage?) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let error = error {
                 print("Error getting image at url: \(url) \n \(error.localizedDescription) \n---\n \(error)")

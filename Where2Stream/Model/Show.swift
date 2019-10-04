@@ -31,7 +31,7 @@ struct Show: Codable {
      */
     let name: String
     let services: [StreamingService]
-    let imageURL: URL
+    let imageURL: URL?
     
     private enum CodingKeys: String, CodingKey {
         case name, services = "locations", imageURL = "picture"
@@ -47,7 +47,7 @@ struct StreamingService: Codable {
      "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/NetflixUS.png?w=92&auto=compress&app_version=2d72243e-0e48-4614-8bf9-e54ca7c01719_2019-10-02"
      */
     let name: String
-    let iconURL: URL
+    let iconURL: URL?
     
     private enum CodingKeys: String, CodingKey {
         case name = "display_name", iconURL = "icon"

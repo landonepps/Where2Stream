@@ -10,6 +10,8 @@
 		4489DC4C234518A200660174 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489DC4B234518A200660174 /* Show.swift */; };
 		4489DC4F23451C1B00660174 /* ShowsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489DC4E23451C1B00660174 /* ShowsController.swift */; };
 		4489DC522345205600660174 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489DC512345205600660174 /* Secrets.swift */; };
+		4489DC5423452BD400660174 /* ShowListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489DC5323452BD400660174 /* ShowListTableViewController.swift */; };
+		4489DC5823452C0D00660174 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489DC5723452C0D00660174 /* ShowTableViewCell.swift */; };
 		44F558F22345176C00559DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F558F12345176C00559DA5 /* AppDelegate.swift */; };
 		44F558F92345176C00559DA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F558F72345176C00559DA5 /* Main.storyboard */; };
 		44F558FB2345176E00559DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F558FA2345176E00559DA5 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		4489DC4B234518A200660174 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		4489DC4E23451C1B00660174 /* ShowsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsController.swift; sourceTree = "<group>"; };
 		4489DC512345205600660174 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		4489DC5323452BD400660174 /* ShowListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListTableViewController.swift; sourceTree = "<group>"; };
+		4489DC5723452C0D00660174 /* ShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
 		44F558EE2345176C00559DA5 /* Where2Stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Where2Stream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F558F12345176C00559DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44F558F82345176C00559DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44033D5923453641001ADC35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4489DC5723452C0D00660174 /* ShowTableViewCell.swift */,
+				44F558F72345176C00559DA5 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44033D5A23453647001ADC35 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4489DC5323452BD400660174 /* ShowListTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4489DC4D23451B6800660174 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +95,10 @@
 		44F558F02345176C00559DA5 /* Where2Stream */ = {
 			isa = PBXGroup;
 			children = (
-				44F558F72345176C00559DA5 /* Main.storyboard */,
 				4489DC4D23451B6800660174 /* Model */,
 				4489DC5023451C3E00660174 /* ModelControllers */,
+				44033D5923453641001ADC35 /* Views */,
+				44033D5A23453647001ADC35 /* ViewControllers */,
 				44F55905234517C000559DA5 /* Resources */,
 				4489DC512345205600660174 /* Secrets.swift */,
 			);
@@ -165,9 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4489DC5823452C0D00660174 /* ShowTableViewCell.swift in Sources */,
 				4489DC4F23451C1B00660174 /* ShowsController.swift in Sources */,
 				4489DC522345205600660174 /* Secrets.swift in Sources */,
 				44F558F22345176C00559DA5 /* AppDelegate.swift in Sources */,
+				4489DC5423452BD400660174 /* ShowListTableViewController.swift in Sources */,
 				4489DC4C234518A200660174 /* Show.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
